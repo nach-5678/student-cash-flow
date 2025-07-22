@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 98%);
+  --foreground: hsl(0, 0%, 26%);
+  --muted: hsl(220, 4%, 96%);
+  --muted-foreground: hsl(0, 0%, 45%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(0, 0%, 26%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(0, 0%, 26%);
+  --border: hsl(220, 9%, 90%);
+  --input: hsl(220, 9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(220, 4%, 96%);
+  --secondary-foreground: hsl(0, 0%, 10%);
+  --accent: hsl(220, 4%, 96%);
+  --accent-foreground: hsl(0, 0%, 10%);
+  --destructive: hsl(4, 84%, 55%);
+  --destructive-foreground: hsl(60, 9%, 98%);
+  --ring: hsl(0, 0%, 26%);
+  --radius: 0.5rem;
+  
+  /* Custom app colors */
+  --app-primary: hsl(207, 90%, 54%);
+  --app-secondary: hsl(0, 0%, 26%);
+  --app-success: hsl(123, 43%, 39%);
+  --app-warning: hsl(35, 100%, 48%);
+  --app-error: hsl(4, 84%, 55%);
+  --app-surface: hsl(0, 0%, 100%);
+  --app-background: hsl(0, 0%, 98%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 4%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 4%, 16%);
+  --muted-foreground: hsl(240, 5%, 65%);
+  --popover: hsl(240, 10%, 4%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 4%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 4%, 16%);
+  --input: hsl(240, 4%, 16%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 4%, 16%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 4%, 16%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 63%, 31%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 5%, 84%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Custom utility classes */
+.shadow-material {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.shadow-material-lg {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12), 0 16px 32px rgba(0,0,0,0.12);
+}
+
+.text-app-primary { color: var(--app-primary); }
+.text-app-secondary { color: var(--app-secondary); }
+.text-app-success { color: var(--app-success); }
+.text-app-warning { color: var(--app-warning); }
+.text-app-error { color: var(--app-error); }
+
+.bg-app-primary { background-color: var(--app-primary); }
+.bg-app-secondary { background-color: var(--app-secondary); }
+.bg-app-success { background-color: var(--app-success); }
+.bg-app-warning { background-color: var(--app-warning); }
+.bg-app-error { background-color: var(--app-error); }
+.bg-app-surface { background-color: var(--app-surface); }
+.bg-app-background { background-color: var(--app-background); }
